@@ -4,7 +4,7 @@
 
 # Document Reader using OCR (English/Hindi)
 
-This project is a document reader that uses Optical Character Recognition (OCR) to extract text from images. It supports both English and Hindi languages. The application allows users to upload an image, extract text from it, and search within the extracted text.
+### Utilized **ColPali implementation of the new Byaldi library + Huggingface transformers for Qwen2-VL.** for document retrieval
 
 ## Prerequisites
 
