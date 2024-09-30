@@ -33,7 +33,7 @@ def extract_text(image, query):
     inputs = processor(text=[text], images=image_inputs, videos=video_inputs, padding=True, return_tensors="pt")
     inputs = inputs.to("cpu")
     with torch.no_grad():
-        generated_ids = vlm.generate(**inputs, max_new_tokens=200, temperature=0.7, top_p=0.9)
+        generated_ids = vlm.generate(**inputs, max_new_tokens=500, temperature=0.7, top_p=0.9)
         generated_ids_trimmed = [out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)]
     return processor.batch_decode(generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
 
